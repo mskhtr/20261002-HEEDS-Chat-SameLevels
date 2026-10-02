@@ -1,0 +1,7 @@
+/* チャット本文・入力欄の横幅を、画面幅に合わせて可変にする。
+   既定: min(48rem, 100vw) / wide: min(60rem, 100vw)
+   ここはもう少し広めだが、超ワイドでも読みにくくならないよう上限を設ける。 */
+.flex.flex-col.mx-auto.w-full.flex-grow.p-4,
+.flex.flex-col.mx-auto.w-full.p-4.pt-0 {
+  max-width: clamp(36rem, 88vw, 70rem) !important;
+}

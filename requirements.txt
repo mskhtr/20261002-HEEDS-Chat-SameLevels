@@ -1,0 +1,6 @@
+python-dotenv==1.2.4
+PyYAML==6.0.3
+nest-asyncio==1.6.0
+langchain-core==1.6.6
+langchain-openai==1.6.7
+chainlit==2.11.0

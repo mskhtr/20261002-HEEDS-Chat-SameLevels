@@ -1,0 +1,49 @@
+# チャットの言葉と、実行する試験の対応は、このファイルだけに書きます。
+# 画面の表、確認文、実行する試験 ID は、起動のたびにここから作ります。
+# 試験を足す・言葉を変えるときは、このファイルを編集してチャットを起動し直します。
+# 入力変数の範囲は書きません。CSV の行が正です。
+# 出力名も書きません。HEEDS の Response 名をそのまま表示します。
+
+design_requirements:
+  - id: crash_safety
+    label: 衝突安全
+    aliases:
+      - 衝突
+      - 乗員保護
+    study_ids:
+      - stress
+      - crash
+    summary: 静荷重解析と衝突解析を両方実行します。
+
+  - id: nvh
+    label: NVH
+    aliases:
+      - 振動
+      - 騒音
+      - 共振
+      - 周波数
+    study_ids:
+      - eigenvalue
+      - frf
+    summary: 固有値解析と周波数応答解析を両方実行します。
+
+studies:
+  - id: crash
+    name_ja: 衝突解析
+    description: 衝突時の応答を見る試験です。
+    heeds_name: Study_crash
+
+  - id: stress
+    name_ja: 静荷重解析
+    description: 静的な荷重に対する応答を見る試験です。
+    heeds_name: Study_stress
+
+  - id: eigenvalue
+    name_ja: 固有値解析
+    description: 構造の固有振動数を見る試験です。
+    heeds_name: Study_eigen
+
+  - id: frf
+    name_ja: 周波数応答解析
+    description: 周波数応答を見る試験です。
+    heeds_name: Study_frf

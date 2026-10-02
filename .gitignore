@@ -1,0 +1,14 @@
+.venv/
+.env
+__pycache__/
+.pytest_cache/
+.chainlit/*
+!.chainlit/config.toml
+.files/
+runs/*
+!runs/.gitkeep
+HEEDS_PROJECT/*.heeds
+*.pyc
+# 起動のたびに catalog.yaml から作り直す
+chainlit.md
+chainlit_*.md
